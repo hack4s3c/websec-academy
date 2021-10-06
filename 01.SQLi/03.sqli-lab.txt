@@ -39,4 +39,14 @@ SQLi Attack ( way #2)
 
 The ORDER BY position number 3 is out of range of the number of items in the select list.
 
+Lab Soln :Use Burp Suite to intercept and modify the request that sets the product category filter. Modify the category parameter, giving it the value 
+
+'+UNION+SELECT+NULL--. Observe that an error occurs. Modify the category parameter to add an additional column containing a null value: 
+
+'+UNION+SELECT+NULL,NULL-- Continue adding null values until the error disappears and the response includes additional content containing the null values. 
+
+
+'+ORDER+BY+3--
+
+
 
