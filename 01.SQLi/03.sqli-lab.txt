@@ -1,0 +1,42 @@
+SQLi - Product category filter
+
+End Goal: determine the number of columns returned by the query.
+
+Background ( Union ):
+
+table1      table2
+a|b          c|d
+...         ....
+1,2         2,3
+3,4         4,5
+
+Query #1: select a, b from table1
+1,2
+3,4
+
+Query #2: select a, b from table1 UNION select c, d from table2
+1,2
+2,3
+3,4
+4,5
+
+Rules:
+- The number and the order of the columns must be the same in all queries
+- The data types must be compatible
+
+SQLi Attack ( way #1)
+select ? from table1 UNION select NULL
+
+- error -> incorrect number of columns
+
+select ? from table1 UNION select NULL, NULL, NULL
+- 200 response -> correct number of columns
+
+SQLi Attack ( way #2)
+' ORDER BY 1--
+' ORDER BY 2--
+' ORDER BY 3--
+
+The ORDER BY position number 3 is out of range of the number of items in the select list.
+
+
